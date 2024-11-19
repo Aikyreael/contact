@@ -34,7 +34,6 @@ public class MainController {
                 contactService.deleteContact(consoleUI.selectContact());
             }
 
-//            case 6 -> ;
             case 7 -> consoleUI.displayNumbersOfContacts(contactService.numbersOfContacts());
             case 8 -> {
                 consoleUI.displayContacts();
