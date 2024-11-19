@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 import school.exercice.contact.entities.Contact;
 import school.exercice.contact.services.ContactService;
 
-import java.util.List;
 import java.util.Scanner;
 
 @Component
@@ -63,29 +62,27 @@ public class ConsoleUI {
     }
 
     public int selectContact() {
-        System.out.print("\nChoisir le contact: ");
         int choice;
         do {
-            choice = scanner.nextInt();
+            choice = getUserInput();
         } while (!isContactChoiceValid(choice));
-        System.out.println("idsnqf");
         return choice;
-    }
-
-    public void displayContainLetter(boolean bool) {
-        System.out.println(bool ? "true" : "false");
     }
 
     public void displayNumbersOfContacts(int number) {
         System.out.println("\nNombres de contacts: " + number);
     }
 
-    private boolean isContactChoiceValid(int choice) {
-//        System.out.println(choice + " " + contactService.getContacts().size());
-        System.out.println(choice < 1);
-        System.out.println(choice > contactService.getContacts().size());
-        return choice < 1 || choice > contactService.getContacts().size();
+    public void displayContainLetter(boolean bool) {
+        System.out.println(bool ? "\ntrue" : "\nfalse");
+    }
 
+    private boolean isContactChoiceValid(int choice) {
+        if (choice < 1 || choice > contactService.getContacts().size()) {
+            System.out.println("choix non valide");
+            return false;
+        }
+        return true;
     }
 }
 

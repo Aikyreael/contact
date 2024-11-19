@@ -21,32 +21,12 @@ public class ContactService {
         contacts.add(contact);
     }
 
-    public void showContacts() {
-
-    }
-
-    public void showContactWithName() {
-
-    }
-
     public void deleteContact(int index) {
         contacts.remove(index-1);
     }
 
-    public void modifyContact() {
-
-    }
-
     public int numbersOfContacts() {
         return contacts.size();
-    }
-
-    public void contactContain() {
-
-    }
-
-    public void closeContactList() {
-
     }
 
     public boolean contactContainLetter(int index) {
