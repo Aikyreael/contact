@@ -28,7 +28,6 @@ public class MainController {
         switch (choice) {
             case 1 -> contactService.addContact(consoleUI.addContact());
             case 2 -> consoleUI.displayContacts();
-//            case 3 -> ;
             case 4 -> {
                 consoleUI.displayContacts();
                 contactService.deleteContact(consoleUI.selectContact());
