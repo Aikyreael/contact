@@ -33,7 +33,7 @@ public class MainController {
                 consoleUI.displayContacts();
                 contactService.deleteContact(consoleUI.selectContact());
             }
-//            case 5 -> ;
+
 //            case 6 -> ;
             case 7 -> consoleUI.displayNumbersOfContacts(contactService.numbersOfContacts());
             case 8 -> {
